@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function BookList({ livros, onRemover }) {
   if (livros.length === 0) {
@@ -7,19 +8,26 @@ function BookList({ livros, onRemover }) {
 
   return (
     <div className="book-list">
-      <h2> Lista de Livros</h2>
+      <h2>Lista de Livros</h2>
       <ul>
-        {livros.map(livro => (
+        {livros.map((livro) => (
           <li key={livro.id} className="book-item">
             <span className="book-info">
               <strong>{livro.titulo}</strong> — {livro.autor} ({livro.ano})
             </span>
-            <button 
-              onClick={() => onRemover(livro.id)} 
-              className="btn-remove"
-            >
-               Remover
-            </button>
+
+            <div className="book-buttons">
+              <Link to={`/catalogo/${livro.id}`} className="btn-details">
+                Ver detalhes
+              </Link>
+
+              <button 
+                onClick={() => onRemover(livro.id)} 
+                className="btn-remove"
+              >
+                Remover
+              </button>
+            </div>
           </li>
         ))}
       </ul>

@@ -1,252 +1,281 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html, body, #root {
-    height: 100%;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  body {
-    font-family: Arial, sans-serif;
-    background: #fff;
-    color: #000;
-  }
+html, body, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
 
-  .app {
-    min-height: 100vh;
-    transition: all 0.3s ease;
-  }
+/*Tema geral*/
+.app.claro {
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  color: #1a1a1a;
+  min-height: 100vh;
+}
 
-  .app.claro {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
-  }
+.app.escuro {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #eeeeee;
+  min-height: 100vh;
+}
 
-  .app.escuro {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #eee;
-  }
+/* ÁREA DE CONTEUDO PRINCIPAL*/
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.main-content {
+  flex: 1;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
 
-  .header h1 {
-    font-size: 2rem;
-    color: white;
-  }
+.catalogo {
+  width: 100%;
+  max-width: 900px;
 
-  .theme-toggle {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    background: white;
-    cursor: pointer;
-    transition: transform 0.2s;
-    font-weight: 600;
-  }
+  /*efeito vidro transparente*/
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
 
-  .theme-toggle:hover {
-    transform: scale(1.05);
-  }
+.escuro .catalogo {
+  background: rgba(0, 0, 0, 0.25);
+}
 
-  .container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
+/*HEADER*/
+.header {
+  width: 100%;
+  padding: 1.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .search-bar {
-    margin-bottom: 2rem;
-  }
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
 
-  .search-input {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+.header h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
-  .book-form-section {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+.theme-toggle {
+  background: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
 
-  .escuro .book-form-section {
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-  }
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
 
-  .book-form-section h2 {
-    margin-bottom: 1rem;
-    color: inherit;
-  }
+/*MENU*/
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.2rem 0;
+}
 
-  .book-form {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr auto;
-    gap: 1rem;
-  }
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
 
-  .form-input {
-    padding: 0.75rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
+  border-bottom: 3px solid transparent;
+  padding-bottom: 5px;
+  transition: 0.2s;
+}
 
-  .escuro .form-input {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
+.menu a:hover {
+  opacity: 0.7;
+}
 
-  .btn-add {
-    padding: 0.75rem 1.5rem;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
+.menu a.active {
+  border-bottom: 3px solid white;
+}
 
-  .btn-add:hover {
-    background: #5568d3;
-  }
+/*HOME*/
+.home {
+  text-align: center;
+  margin-top: 4rem;
+}
 
-  .book-list {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+.home button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #4ade80;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
 
-  .escuro .book-list {
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-  }
+.home button:hover {
+  background: #22c55e;
+}
 
-  .book-list h2 {
-    margin-bottom: 1rem;
-    color: inherit;
-  }
+/*SEARCH BAR*/
+.search-bar {
+  margin-bottom: 1.8rem;
+}
 
-  .book-list ul {
-    list-style: none;
-  }
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 
-  .book-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 8px;
-    transition: transform 0.2s;
-  }
+/*FORM DE ADICIONAR LIVRO*/
+.book-form-section {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
 
-  .escuro .book-item {
-    background: rgba(255, 255, 255, 0.05);
-  }
+.escuro .book-form-section {
+  background: rgba(255,255,255,0.07);
+  color: white;
+}
 
-  .book-item:hover {
-    transform: translateX(5px);
-  }
+.book-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr auto;
+  gap: 1rem;
+}
 
-  .book-info {
-    flex: 1;
-  }
+.form-input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+}
 
-  .btn-remove {
-    padding: 0.5rem 1rem;
-    background: #ef4444;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
+.escuro .form-input {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+  color: white;
+}
 
-  .btn-remove:hover {
-    background: #dc2626;
-  }
+/*BOTAO ADD*/
+.btn-add {
+  background: #4ade80;
+  color: black;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-  .counters {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+.btn-add:hover {
+  background: #22c55e;
+}
 
-  .escuro .counters {
-    background: rgba(255, 255, 255, 0.05);
-  }
+/*LISTA DE LIVROS*/
+.book-list {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
 
-  .counter {
-    text-align: center;
-  }
+.escuro .book-list {
+  background: rgba(255,255,255,0.08);
+}
 
-  .counter-label {
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    margin-bottom: 0.5rem;
-  }
+.book-item {
+  background: rgba(0,0,0,0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .counter-value {
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #667eea;
-  }
+.escuro .book-item {
+  background: rgba(255,255,255,0.05);
+}
 
-  .escuro .counter-value {
-    color: #a5b4fc;
-  }
+/*BOTAO REMOVER*/
+.btn-remove {
+  background: #ef4444;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-  .no-books {
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.2rem;
-    opacity: 0.7;
-  }
+.btn-remove:hover {
+  background: #dc2626;
+}
 
-  .loading, .error {
-    text-align: center;
-    padding: 4rem;
-    font-size: 1.5rem;
-    color: white;
-  }
+/*CONTADORES*/
+.counters {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  gap: 3rem;
+}
 
-  @media (max-width: 768px) {
-    .book-form {
-      grid-template-columns: 1fr;
-    }
-    
-    .header h1 {
-      font-size: 1.5rem;
-    }
-  }
+.escuro .counters {
+  background: rgba(255,255,255,0.07);
+}
+
+.counter-value {
+  color: #6a5acd;
+}
+
+.escuro .counter-value {
+  color: #a5b4fc;
+}
+
+
+/*BOTAO DE VOLTAR*/
+
+.btn-voltar {
+  background: #ef4444;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-voltar:hover {
+  background: #dc2626;
+}
+
+

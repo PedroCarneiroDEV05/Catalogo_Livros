@@ -17,9 +17,9 @@ http://localhost:5173/
 
 Decisões do Projeto:
 
-Componentização baseada em responsabilidade (App, Header, SearchBar, BookList, Counters, BookForm, Counters, ThemeContext, useLocalStorage).,
-Uso de useState para estados locais.,
-Uso de useEffect para sincronização com o localStorage.,
+Componentização baseada em responsabilidade (App, Header, SearchBar, BookList, Counters, BookForm, Counters, ThemeContext, useLocalStorage).
+Uso de useState para estados locais.
+Uso de useEffect para sincronização com o localStorage.
 Criação de hook customizado useLocalStorage para persistir dados como tema dark ou light.
 useRef para controle de IDs incrementais sem re-renderização e foco no input de busca.
 
