@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
+import { useState } from 'react';
 
 const BookForm = ({ onAdicionar }) => {
   const [titulo, setTitulo] = useState('');
@@ -7,19 +7,22 @@ const BookForm = ({ onAdicionar }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!titulo.trim() || !autor.trim() || !ano.trim()) {
-      alert(' Preencha todos os campos!');
+      alert('Preencha todos os campos!');
       return;
     }
 
-    if (isNaN(ano) || ano < 1000 || ano > new Date().getFullYear()) {
-      alert(' Digite um ano válido!');
+    const anoAtual = new Date().getFullYear();
+    const anoNum = Number(ano);
+
+    if (isNaN(anoNum) || anoNum < 1000 || anoNum > anoAtual) {
+      alert('Digite um ano válido!');
       return;
     }
 
     onAdicionar({ titulo, autor, ano: Number(ano) });
-    
+
     setTitulo('');
     setAutor('');
     setAno('');
@@ -56,5 +59,4 @@ const BookForm = ({ onAdicionar }) => {
   );
 };
 
-export { BookForm };
 export default BookForm;

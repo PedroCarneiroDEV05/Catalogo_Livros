@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Counters = ({ total, filtrados }) => {
   return (
     <div className="counters">
@@ -15,5 +13,4 @@ const Counters = ({ total, filtrados }) => {
   );
 };
 
-export { Counters };
 export default Counters;

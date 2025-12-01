@@ -2,11 +2,10 @@ import { useEffect } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 import SearchBar from "../components/SearchBar";
-import { BookForm } from "../components/BookForm";
-import { BookList } from "../components/BookList";
+import BookForm from "../components/BookForm";
+import BookList from "../components/BookList";
 import Counters from "../components/Counters";
 
-import "../index.css";
 export default function Catalogo() {
   const [livros, setLivros] = useLocalStorage("livros", []);
   const [busca, setBusca] = useLocalStorage("busca", "");
@@ -47,10 +46,12 @@ export default function Catalogo() {
     setLivros(livros.filter((livro) => livro.id !== id));
   };
 
-  const livrosFiltrados = livros.filter((livro) =>
-    livro.titulo.toLowerCase().includes(busca.toLowerCase()) ||
-    livro.autor.toLowerCase().includes(busca.toLowerCase())
-  );
+  const buscaLower = busca.toLowerCase();
+  const livrosFiltrados = livros.filter((livro) => {
+    const tituloMatch = livro.titulo.toLowerCase().includes(buscaLower);
+    const autorMatch = livro.autor.toLowerCase().includes(buscaLower);
+    return tituloMatch || autorMatch;
+  });
 
   if (loading) {
     return <div className="loading">Carregando livros...</div>;

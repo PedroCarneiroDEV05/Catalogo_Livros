@@ -12,7 +12,7 @@ export default function LivroDetalhe() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const encontradoLocal = livrosSalvos.find(l => l.id == id);
+    const encontradoLocal = livrosSalvos.find(l => l.id === Number(id));
 
     if (encontradoLocal) {
       setLivro(encontradoLocal);
@@ -23,7 +23,7 @@ export default function LivroDetalhe() {
     fetch("/books.json")
       .then(res => res.json())
       .then(data => {
-        const encontradoJSON = data.find(l => l.id == id);
+        const encontradoJSON = data.find(l => l.id === Number(id));
         setLivro(encontradoJSON || null);
         setLoading(false);
       })
@@ -40,9 +40,9 @@ export default function LivroDetalhe() {
 
   if (!livro) {
     return (
-      <div>
+      <div className="livro-nao-encontrado">
         <h2>Livro não encontrado!</h2>
-        <button onClick={() => navigate(-1)}>Voltar</button>
+        <button className="btn-voltar" onClick={() => navigate(-1)}>Voltar</button>
       </div>
     );
   }

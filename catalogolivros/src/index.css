@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: rgb(0, 0, 0);
 }
 
 /*Tema geral*/
@@ -41,7 +42,7 @@ html, body, #root {
   padding: 2rem;
   border-radius: 20px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .escuro .catalogo {
@@ -58,7 +59,7 @@ html, body, #root {
 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .header h1 {
@@ -143,7 +144,7 @@ html, body, #root {
   border-radius: 12px;
   border: none;
   font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /*FORM DE ADICIONAR LIVRO*/
@@ -151,12 +152,12 @@ html, body, #root {
   background: white;
   padding: 1.8rem;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
 }
 
 .escuro .book-form-section {
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   color: white;
 }
 
@@ -174,8 +175,8 @@ html, body, #root {
 }
 
 .escuro .form-input {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
   color: white;
 }
 
@@ -200,16 +201,16 @@ html, body, #root {
   background: white;
   padding: 1.8rem;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
 }
 
 .escuro .book-list {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .book-item {
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 0.8rem;
@@ -219,7 +220,7 @@ html, body, #root {
 }
 
 .escuro .book-item {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /*BOTAO REMOVER*/
@@ -245,12 +246,12 @@ html, body, #root {
   justify-content: center;
   border-radius: 12px;
   background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   gap: 3rem;
 }
 
 .escuro .counters {
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .counter-value {
@@ -279,18 +280,12 @@ html, body, #root {
   background: #dc2626;
 }
 
-div#root, .app { 
-  width: 100%;
-}
-
 div.book-buttons a {
   text-decoration: none;
   background-color: #4ade80;
   color: #fff;
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;

@@ -10,8 +10,8 @@ export default function MainLayout() {
       <Header />
 
       <nav className="menu">
-        <NavLink to="/" className={({isActive}) => isActive ? 'menu-link active' : 'menu-link'}>Home</NavLink>
-        <NavLink to="/catalogo" className={({isActive}) => isActive ? 'menu-link active' : 'menu-link'}>Catálogo</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'menu-link active' : 'menu-link'}>Home</NavLink>
+        <NavLink to="/catalogo" className={({ isActive }) => isActive ? 'menu-link active' : 'menu-link'}>Catálogo</NavLink>
       </nav>
 
       <main className="main-content">

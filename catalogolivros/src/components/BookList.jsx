@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function BookList({ livros, onRemover }) {
@@ -13,7 +12,11 @@ function BookList({ livros, onRemover }) {
         {livros.map((livro) => (
           <li key={livro.id} className="book-item">
             <span className="book-info">
-              <strong>{livro.titulo}</strong> — {livro.autor} ({livro.ano})
+              <div className="book-info">
+                <strong className="book-title">{livro.titulo}</strong>
+                <span className="book-author">{livro.autor}</span>
+                <span className="book-year">({livro.ano})</span>
+              </div>
             </span>
 
             <div className="book-buttons">
@@ -21,8 +24,8 @@ function BookList({ livros, onRemover }) {
                 Ver detalhes
               </Link>
 
-              <button 
-                onClick={() => onRemover(livro.id)} 
+              <button
+                onClick={() => onRemover(livro.id)}
                 className="btn-remove"
               >
                 Remover
@@ -35,5 +38,4 @@ function BookList({ livros, onRemover }) {
   );
 }
 
-export { BookList };
 export default BookList;

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const SearchBar = ({ busca, setBusca }) => {
   const inputRef = useRef(null);
@@ -21,5 +21,4 @@ const SearchBar = ({ busca, setBusca }) => {
   );
 };
 
-export { SearchBar };
 export default SearchBar;
