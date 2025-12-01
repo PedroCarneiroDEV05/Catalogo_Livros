@@ -216,4 +216,4 @@ Navegação sem reload de página (SPA real)
 Projeto desenvolvido como atividade avaliativa da disciplina de Front-end Frameworks com React.
 
 
-Data de entrega:Dezembro/2024
+Data de entrega:Dezembro/2025
