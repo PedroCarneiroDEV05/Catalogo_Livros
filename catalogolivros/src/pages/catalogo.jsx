@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-
 import SearchBar from "../components/SearchBar";
 import BookForm from "../components/BookForm";
 import BookList from "../components/BookList";
@@ -9,14 +8,13 @@ import Counters from "../components/Counters";
 export default function Catalogo() {
   const [livros, setLivros] = useLocalStorage("livros", []);
   const [busca, setBusca] = useLocalStorage("busca", "");
-  const [loading, setLoading] = useLocalStorage("loading", true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (livros.length > 0) {
       setLoading(false);
       return;
     }
-
     fetch("/books.json")
       .then((response) => response.json())
       .then((data) => {
@@ -60,11 +58,8 @@ export default function Catalogo() {
   return (
     <div className="container">
       <SearchBar busca={busca} setBusca={setBusca} />
-
       <BookForm onAdicionar={adicionarLivro} />
-
       <BookList livros={livrosFiltrados} onRemover={removerLivro} />
-
       <Counters total={livros.length} filtrados={livrosFiltrados.length} />
     </div>
   );
