@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+
+  .app {
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  }
+
+  .app.claro {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+  }
+
+  .app.escuro {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .theme-toggle {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-weight: 600;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.05);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .search-bar {
+    margin-bottom: 2rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .book-form-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .escuro .book-form-section {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  .book-form-section h2 {
+    margin-bottom: 1rem;
+    color: inherit;
+  }
+
+  .book-form {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr auto;
+    gap: 1rem;
+  }
+
+  .form-input {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .escuro .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .btn-add {
+    padding: 0.75rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-add:hover {
+    background: #5568d3;
+  }
+
+  .book-list {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .escuro .book-list {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  .book-list h2 {
+    margin-bottom: 1rem;
+    color: inherit;
+  }
+
+  .book-list ul {
+    list-style: none;
+  }
+
+  .book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .escuro .book-item {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .book-item:hover {
+    transform: translateX(5px);
+  }
+
+  .book-info {
+    flex: 1;
+  }
+
+  .btn-remove {
+    padding: 0.5rem 1rem;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-remove:hover {
+    background: #dc2626;
+  }
+
+  .counters {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .escuro .counters {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .counter {
+    text-align: center;
+  }
+
+  .counter-label {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .counter-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+  }
+
+  .escuro .counter-value {
+    color: #a5b4fc;
+  }
+
+  .no-books {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.7;
+  }
+
+  .loading, .error {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .book-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  }

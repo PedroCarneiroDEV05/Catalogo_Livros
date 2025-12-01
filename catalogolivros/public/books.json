@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "titulo": "Clean Code",
+    "autor": "Robert C. Martin",
+    "ano": 2008
+  },
+  {
+    "id": 2,
+    "titulo": "You Don't Know JS",
+    "autor": "Kyle Simpson",
+    "ano": 2015
+  },
+  {
+    "id": 3,
+    "titulo": "Refactoring",
+    "autor": "Martin Fowler",
+    "ano": 1999
+  }
+]
