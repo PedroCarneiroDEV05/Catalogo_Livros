@@ -1,4 +1,3 @@
-// src/pages/Catalogo.jsx
 import { useEffect } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
@@ -7,8 +6,7 @@ import { BookForm } from "../components/BookForm";
 import { BookList } from "../components/BookList";
 import Counters from "../components/Counters";
 
-import "../index.css"; // <-- seu CSS está aqui
-
+import "../index.css";
 export default function Catalogo() {
   const [livros, setLivros] = useLocalStorage("livros", []);
   const [busca, setBusca] = useLocalStorage("busca", "");

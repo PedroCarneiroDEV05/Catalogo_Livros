@@ -6,14 +6,12 @@ export default function LivroDetalhe() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Carrega livros do localStorage
   const [livrosSalvos] = useLocalStorage("livros", []);
 
   const [livro, setLivro] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 1. TENTA ACHAR O LIVRO NO LOCALSTORAGE
     const encontradoLocal = livrosSalvos.find(l => l.id == id);
 
     if (encontradoLocal) {
@@ -22,7 +20,6 @@ export default function LivroDetalhe() {
       return;
     }
 
-    // 2. SENÃO, CARREGA DO books.json
     fetch("/books.json")
       .then(res => res.json())
       .then(data => {
