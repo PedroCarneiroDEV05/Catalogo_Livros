@@ -16,5 +16,287 @@
     "titulo": "Refactoring",
     "autor": "Martin Fowler",
     "ano": 1999
+  },
+  {
+    "id": 4,
+    "titulo": "The Pragmatic Programmer",
+    "autor": "Andrew Hunt, David Thomas",
+    "ano": 1999
+  },
+  {
+    "id": 5,
+    "titulo": "Design Patterns",
+    "autor": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "ano": 1994
+  },
+  {
+    "id": 6,
+    "titulo": "Code Complete",
+    "autor": "Steve McConnell",
+    "ano": 1993
+  },
+  {
+    "id": 7,
+    "titulo": "Introduction to Algorithms",
+    "autor": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+    "ano": 1990
+  },
+  {
+    "id": 8,
+    "titulo": "Clean Architecture",
+    "autor": "Robert C. Martin",
+    "ano": 2017
+  },
+  {
+    "id": 9,
+    "titulo": "The Mythical Man-Month",
+    "autor": "Frederick P. Brooks Jr.",
+    "ano": 1975
+  },
+  {
+    "id": 10,
+    "titulo": "Structure and Interpretation of Computer Programs",
+    "autor": "Harold Abelson, Gerald Jay Sussman, Julie Sussman",
+    "ano": 1984
+  },
+  {
+    "id": 11,
+    "titulo": "JavaScript: The Good Parts",
+    "autor": "Douglas Crockford",
+    "ano": 2008
+  },
+  {
+    "id": 12,
+    "titulo": "Eloquent JavaScript",
+    "autor": "Marijn Haverbeke",
+    "ano": 2011
+  },
+  {
+    "id": 13,
+    "titulo": "Head First Design Patterns",
+    "autor": "Eric Freeman, Elisabeth Robson",
+    "ano": 2004
+  },
+  {
+    "id": 14,
+    "titulo": "Domain-Driven Design",
+    "autor": "Eric Evans",
+    "ano": 2003
+  },
+  {
+    "id": 15,
+    "titulo": "Patterns of Enterprise Application Architecture",
+    "autor": "Martin Fowler",
+    "ano": 2002
+  },
+  {
+    "id": 16,
+    "titulo": "Working Effectively with Legacy Code",
+    "autor": "Michael Feathers",
+    "ano": 2004
+  },
+  {
+    "id": 17,
+    "titulo": "Test Driven Development",
+    "autor": "Kent Beck",
+    "ano": 2002
+  },
+  {
+    "id": 18,
+    "titulo": "The Clean Coder",
+    "autor": "Robert C. Martin",
+    "ano": 2011
+  },
+  {
+    "id": 19,
+    "titulo": "Programming Pearls",
+    "autor": "Jon Bentley",
+    "ano": 1986
+  },
+  {
+    "id": 20,
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "ano": 2001
+  },
+  {
+    "id": 21,
+    "titulo": "Cracking the Coding Interview",
+    "autor": "Gayle Laakmann McDowell",
+    "ano": 2008
+  },
+  {
+    "id": 22,
+    "titulo": "The Art of Computer Programming",
+    "autor": "Donald Knuth",
+    "ano": 1968
+  },
+  {
+    "id": 23,
+    "titulo": "Don't Make Me Think",
+    "autor": "Steve Krug",
+    "ano": 2000
+  },
+  {
+    "id": 24,
+    "titulo": "Algorithms",
+    "autor": "Robert Sedgewick, Kevin Wayne",
+    "ano": 2011
+  },
+  {
+    "id": 25,
+    "titulo": "Python Crash Course",
+    "autor": "Eric Matthes",
+    "ano": 2015
+  },
+  {
+    "id": 26,
+    "titulo": "Fluent Python",
+    "autor": "Luciano Ramalho",
+    "ano": 2015
+  },
+  {
+    "id": 27,
+    "titulo": "The Go Programming Language",
+    "autor": "Alan A. A. Donovan, Brian W. Kernighan",
+    "ano": 2015
+  },
+  {
+    "id": 28,
+    "titulo": "Rust Programming Language",
+    "autor": "Steve Klabnik, Carol Nichols",
+    "ano": 2018
+  },
+  {
+    "id": 29,
+    "titulo": "Learning React",
+    "autor": "Alex Banks, Eve Porcello",
+    "ano": 2017
+  },
+  {
+    "id": 30,
+    "titulo": "Fullstack React",
+    "autor": "Anthony Accomazzo, Nate Murray, Ari Lerner",
+    "ano": 2017
+  },
+  {
+    "id": 31,
+    "titulo": "Node.js Design Patterns",
+    "autor": "Mario Casciaro",
+    "ano": 2014
+  },
+  {
+    "id": 32,
+    "titulo": "Database System Concepts",
+    "autor": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+    "ano": 1986
+  },
+  {
+    "id": 33,
+    "titulo": "Site Reliability Engineering",
+    "autor": "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy",
+    "ano": 2016
+  },
+  {
+    "id": 34,
+    "titulo": "Continuous Delivery",
+    "autor": "Jez Humble, David Farley",
+    "ano": 2010
+  },
+  {
+    "id": 35,
+    "titulo": "The DevOps Handbook",
+    "autor": "Gene Kim, Jez Humble, Patrick Debois, John Willis",
+    "ano": 2016
+  },
+  {
+    "id": 36,
+    "titulo": "Accelerate",
+    "autor": "Nicole Forsgren, Jez Humble, Gene Kim",
+    "ano": 2018
+  },
+  {
+    "id": 37,
+    "titulo": "Artificial Intelligence: A Modern Approach",
+    "autor": "Stuart Russell, Peter Norvig",
+    "ano": 1995
+  },
+  {
+    "id": 38,
+    "titulo": "Deep Learning",
+    "autor": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+    "ano": 2016
+  },
+  {
+    "id": 39,
+    "titulo": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+    "autor": "Aurélien Géron",
+    "ano": 2017
+  },
+  {
+    "id": 40,
+    "titulo": "The Phoenix Project",
+    "autor": "Gene Kim, Kevin Behr, George Spafford",
+    "ano": 2013
+  },
+  {
+    "id": 41,
+    "titulo": "The Unicorn Project",
+    "autor": "Gene Kim",
+    "ano": 2019
+  },
+  {
+    "id": 42,
+    "titulo": "Peopleware",
+    "autor": "Tom DeMarco, Timothy Lister",
+    "ano": 1987
+  },
+  {
+    "id": 43,
+    "titulo": "The C Programming Language",
+    "autor": "Brian W. Kernighan, Dennis M. Ritchie",
+    "ano": 1978
+  },
+  {
+    "id": 44,
+    "titulo": "Learning SQL",
+    "autor": "Alan Beaulieu",
+    "ano": 2005
+  },
+  {
+    "id": 45,
+    "titulo": "Designing Data-Intensive Applications",
+    "autor": "Martin Kleppmann",
+    "ano": 2017
+  },
+  {
+    "id": 46,
+    "titulo": "HTTP: The Definitive Guide",
+    "autor": "David Gourley, Brian Totty",
+    "ano": 2002
+  },
+  {
+    "id": 47,
+    "titulo": "Computer Networks",
+    "autor": "Andrew S. Tanenbaum, David J. Wetherall",
+    "ano": 1981
+  },
+  {
+    "id": 48,
+    "titulo": "Operating System Concepts",
+    "autor": "Abraham Silberschatz, Peter B. Galvin, Greg Gagne",
+    "ano": 1983
+  },
+  {
+    "id": 49,
+    "titulo": "The Rust Programming Language",
+    "autor": "Steve Klabnik, Carol Nichols",
+    "ano": 2018
+  },
+  {
+    "id": 50,
+    "titulo": "Programming TypeScript",
+    "autor": "Boris Cherny",
+    "ano": 2019
   }
 ]

@@ -7,6 +7,7 @@
 html, body, #root {
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: rgb(0, 0, 0);
 }
 
 /*Tema geral*/
@@ -278,4 +279,24 @@ html, body, #root {
   background: #dc2626;
 }
 
+div#root, .app { 
+  width: 100%;
+}
 
+div.book-buttons a {
+  text-decoration: none;
+  background-color: #4ade80;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+
+div.book-buttons a:hover {
+  background: #22c55e;
+}

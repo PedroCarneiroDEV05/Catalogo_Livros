@@ -69,7 +69,7 @@ catalogolivros/
 
 Funcionalidades Implementadas
 
-✅ React Router
+React Router
 
 Configuração de Rotas(`App.jsx`)
 jsx
